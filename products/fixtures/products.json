@@ -1,0 +1,22 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "is_premium": false,
+            "sku": "wre10030 ",
+            "name": "Torre Dei Beati",
+            "region": "Marche IGP",
+            "country": "IT",
+            "grapes": "Montepulciano, Sangiovese",
+            "year": "2020",
+            "style": "Red",
+            "code": "10030",
+            "food_pairing": "Spicy Food, Pasta and Pizza, Hard Cheese",
+            "price": 15.00,
+            "image": "noimage.png",
+            "stock": 100
+        }
+    }
+]
