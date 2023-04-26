@@ -37,10 +37,14 @@
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
+                                <div class="d-flex card-body pb-0 product-description">
+                                    <p class="font-italic mb-0">{{product.country.name}} -</p>
+                                    <p class="mb-0"> {{product.year}}</p>
+                                </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}

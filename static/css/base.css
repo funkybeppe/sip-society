@@ -70,6 +70,10 @@ body {
 	z-index: -1;
 }
 
+.product-description {
+    padding-top: 5px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
