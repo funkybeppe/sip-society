@@ -17,15 +17,15 @@
                 Wines
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wines-link">
-                <a href="" class="dropdown-item">Red Wines</a>
-                <a href="" class="dropdown-item">White Wines</a>
-                <a href="" class="dropdown-item">Rose' Wines</a>
-                <a href="" class="dropdown-item">Sparkling Wines</a>
+                <a href="{% url 'products' %}?category=red_wines" class="dropdown-item">Red Wines</a>
+                <a href="{% url 'products' %}?category=white_wines" class="dropdown-item">White Wines</a>
+                <a href="{% url 'products' %}?category=rose_wines" class="dropdown-item">Rose' Wines</a>
+                <a href="{% url 'products' %}?category=sparkling_wines" class="dropdown-item">Sparkling Wines</a>
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'products' %}?is_premium=True" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Premium Wines
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">

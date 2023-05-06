@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load urls %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -10,74 +11,254 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h3 class="logo-font">Products</h3>
-                <hr class="w-50 mb-1">
+
+<div class="overlay"></div>
+<div class="main-container col-lg-11 mx-auto pt-3 pb-3 mt-1 mb-3 bg-white">
+    <!-- ADD PAGE TITLE DEPENDING ON CURRENT CATEGORY -->
+    <div class="pt-lg-3">
+        <div class="col-12 mb-4 mb-lg-3">
+            <div class="col-12 p-0 mx-auto">
+                <div class="d-md-flex align-items-baseline justify-content-between mb-2">
+                    <div class="col-md-6 p-0">
+                        <p class="mb-2 mb-md-1">
+                          <i class="fas fa-th-large font-size-smaller"></i>
+                          <!-- ADD NUMBER OF ITEMS -->
+                          <span class="font-weight-bold">{{products|length}} items</span>
+                          {% if current_category %}
+                          <span> found in <em class="font-weight-bold">{{current_category.get_friendly_name}}</em> collection</span>
+                          {% endif %}
+                          {% if is_premium %}
+                          <span> found in <em class="font-weight-bold">Premium</em> collection</span>
+                          {% endif %}
+                          {% if search_term %}
+                          <span> found for <q class="font-weight-bold">{{search_term}}</q></span>
+                          {% endif %}
+                        </p>
+                    </div>
+                </div>
+              <!-- ADD RESPONSIVE FILTERS CONTAINERS -->
+            <hr class="d-none d-lg-block mb-1 mt-0">
+            <div class="navbar navbar-expand-lg navbar-light pl-0">
+                <button class="d-lg-none button rounded-0 small-btn" type="button" data-toggle="collapse" data-target="#navbarTogglerFilters" aria-controls="navbarTogglerFilters" aria-expanded="false" aria-label="Toggle navigation">
+                  Filter
+                </button>
+                <div class="collapse navbar-collapse d-lg-flex flex-row align-items-start" id="navbarTogglerFilters">
+                    <h6 class="col-md-2 col-xl-1 p-0 mb-0 d-none d-lg-block mr-xl-4 text-uppercase font-weight-bold">Filter By</h6>
+                    <ul class="col-xl-10 navbar-nav mt-2 mt-lg-0 d-lg-flex flex-wrap">
+                        <!-- ADD CATEGORY FILTER IF IT'S NOT ACTIVE -->
+                        {% if not current_category and not is_premium and not filters_list.category %}
+                        <li class="col-md-3 col-xl-2 p-0 nav-item mt-2 mt-lg-0 mr-4 mb-2">
+                            <div class="dropdown">
+                                <button class="dropdown-btn w-100 text-muted d-flex justify-content-between text-uppercase" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Category</span>
+                                    <span class="dropdown-toggle"></span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-lg-start">
+                                    {% for category in categories %}
+                                    <a class="dropdown-item" href="{{current_url}}category={{category|urlencode}}">{{category.get_friendly_name}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <!-- ADD STYLE FILTER FOR DELUXE EDITION IF IT'S NOT ACTIVE -->
+                        {% if is_premium and not premium_style %}
+                        <li class="col-md-3 col-xl-2 p-0 nav-item mt-2 mt-lg-0 mr-4 mb-2">
+                            <div class="dropdown">
+                                <button class="dropdown-btn w-100 text-muted d-flex justify-content-between text-uppercase" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Style Of Wine</span>
+                                    <span class="dropdown-toggle"></span>
+                                </button>                                
+                                <div class="dropdown-menu dropdown-menu-lg-start">
+                                    {% for style in premium_styles %}
+                                    <a class="dropdown-item" href="{{current_url}}style={{style|urlencode}}">{{style}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <!-- ADD GRAPES FILTER IF IT'S NOT ACTIVE -->
+                        {% if not filters_list.grapes %}
+                        <li class="col-md-3 col-xl-2 p-0 nav-item mt-2 mt-lg-0 mr-4 mb-2">
+                            <div class="dropdown">
+                                <button class="dropdown-btn w-100 text-muted d-flex justify-content-between text-uppercase" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Grape Variety</span>
+                                    <span class="dropdown-toggle"></span>
+                                </button>                                
+                                <div class="dropdown-menu dropdown-menu-lg-start">
+                                    {% for grape in grapes_list %}
+                                        <a class="dropdown-item" href="{{current_url}}grapes={{grape|urlencode}}">{{grape}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <!-- ADD YEAR FILTER IF IT'S NOT ACTIVE -->
+                        {% if not filters_list.year %}
+                        <li class="col-md-3 col-xl-2 p-0 nav-item mt-2 mt-lg-0 mr-4 mb-2">
+                            <div class="dropdown">
+                                <button class="dropdown-btn w-100 text-muted d-flex justify-content-between text-uppercase" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Year</span>
+                                    <span class="dropdown-toggle"></span>
+                                </button>                                
+                                <div class="dropdown-menu dropdown-menu-lg-start">
+                                    {% for year in years_list %}
+                                        <a class="dropdown-item" href="{{current_url}}year={{year|urlencode}}">{{year}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <!-- ADD COUNTRY FILTER IF IT'S NOT ACTIVE -->
+                        {% if not filters_list.country %}
+                        <li class="col-md-3 col-xl-2 p-0 nav-item mt-2 mt-lg-0 mr-4 mb-2">
+                            <div class="dropdown">
+                                <button class="dropdown-btn w-100 text-muted d-flex justify-content-between text-uppercase" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Country</span>
+                                    <span class="dropdown-toggle"></span>
+                                </button>                                
+                                <div class="dropdown-menu dropdown-menu-lg-start">
+                                    {% for country in countries_list %}
+                                        <a class="dropdown-item" href="{{current_url}}country={{country|urlencode}}">{{country}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <!-- ADD REGION FILTER IF IT'S NOT ACTIVE -->
+                        {% if not filters_list.region %}
+                        <li class="col-md-3 col-xl-2 p-0 nav-item mt-2 mt-lg-0 mr-4 mb-2">
+                            <div class="dropdown">
+                                <button class="dropdown-btn w-100 text-muted d-flex justify-content-between text-uppercase" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Region</span>
+                                    <span class="dropdown-toggle"></span>
+                                </button>                                
+                                <div class="dropdown-menu dropdown-menu-lg-start">
+                                    {% for region in regions_list %}
+                                        <a class="dropdown-item" href="{{current_url}}region={{region|urlencode}}">{{region}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                        <!-- ADD FOOD PAIRING FILTER IF IT'S NOT ACTIVE -->
+                        {% if not filters_list.food_pairing %}
+                        <li class="col-md-3 col-xl-2 p-0 nav-item mt-2 mt-lg-0 mr-4 mb-2">
+                            <div class="dropdown">
+                                <button class="dropdown-btn w-100 text-muted d-flex justify-content-between text-uppercase" data-toggle="dropdown" aria-expanded="false">
+                                    <span>Food Pairing</span>
+                                    <span class="dropdown-toggle"></span>
+                                </button>                                
+                                <div class="dropdown-menu dropdown-menu-lg-start">
+                                    {% for food in food_pairing_list %}
+                                        <a class="dropdown-item" href="{{current_url}}food_pairing={{food|urlencode}}">{{food}}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
+            <hr class="d-none d-lg-block mt-0">
+            <!-- ADD LIST OF ACTIVE FILTERS -->
+            {% if filters_list %}
+            <div class="d-flex flex-column-reverse flex-md-row"> 
+                <div class="d-flex flex-column-reverse flex-md-row"></div>         
+                <a class="col-md-2 col-xl-1 p-0 pt-xl-1 m-0 mr-xl-4" href="{{current_url_no_filters}}"><u>CLEAR ALL</u></a>
+                <ul class="col-md-10 mt-2 m-md-0 p-0 d-flex flex-wrap list-unstyled">
+                    {% for key, value in filters_list.items %}
+                    <li class="mr-2 mb-2">
+                        <div class="d-flex p-1 pr-4 position-relative filter-active">
+                            <span>{{value}}</span>
+                            {% if remove_filter %}
+                            <a class="position-absolute" href="{{ current_url_no_filters }}">
+                                <span hidden>Clear Filter</span>
+                                <i class="fas fa-times"></i>
+                            </a>
+                            {% else %}
+                            <a class="position-absolute" href="{% del_params request.get_full_path key %}">
+                                <span hidden>Clear Filter</span>
+                                <i class="fas fa-times"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
-                                </div>
-                                <div class="d-flex card-body pb-0 product-description">
-                                    <p class="font-italic mb-0">{{product.country.name}} -</p>
-                                    <p class="mb-0"> {{product.year}}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            {% if current_category %}
+            <h1 class="mb-2 mb-lg-2 text-center">{{current_category.get_friendly_name}}</h1>
+            {% elif is_premium %}
+            <h1 class="mb-2 mb-lg-2 text-center">Premium Wine</h1>
+            {% else %}
+            <h1 class="mb-2 mb-lg-2 text-center">All Products</h1>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body pb-0">
+                                <p class="mb-0">{{ product.name }}</p>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                        {% if product.rating %}
+                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                        {% else %}
+                                            <small class="text-muted">No Rating</small>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:1 %}
+                        <div class="col-12 d-sm-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}                        
+                    {% if forloop.counter|divisibleby:2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:4 %}
+                        <div class="col-12 d-none d-xl-block mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
+</div>
+    
 {% endblock %}
+                            

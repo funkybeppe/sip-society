@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'django_countries',
+    'url_tools',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'sip_society.context_processors.add_products_list_to_context',
+                'url_tools.context_processors.current_url',
             ],
         },
     },
