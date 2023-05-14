@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
@@ -11,10 +11,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -23,10 +23,10 @@
                 Wines
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wines-link">
-                <a href="" class="dropdown-item">Red Wines</a>
-                <a href="" class="dropdown-item">White Wines</a>
-                <a href="" class="dropdown-item">Rose' Wines</a>
-                <a href="" class="dropdown-item">Sparkling Wines</a>
+                <a href="{% url 'products' %}?category=red_wines" class="dropdown-item">Red Wines</a>
+                <a href="{% url 'products' %}?category=white_wines" class="dropdown-item">White Wines</a>
+                <a href="{% url 'products' %}?category=rose_wines" class="dropdown-item">Rose' Wines</a>
+                <a href="{% url 'products' %}?category=sparkling_wines" class="dropdown-item">Sparkling Wines</a>
             </div>
         </li>
 
