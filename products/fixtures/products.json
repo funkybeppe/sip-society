@@ -1,0 +1,62 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "is_premium": false,
+            "sku": "wre10030 ",
+            "name": "Torre Dei Beati",
+            "region": "Marche IGP",
+            "country": "IT",
+            "grapes": "Montepulciano, Sangiovese",
+            "year": "2020",
+            "style": "Red",
+            "code": "10030",
+            "food_pairing": "Spicy Food, Pasta and Pizza, Hard Cheese",
+            "price": 15.00,
+            "image": "torre-dei-beati-2019.jpeg",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "is_premium": false,
+            "sku": "wre10031 ",
+            "name": "Amarone della Valpolicella",
+            "region": "Veneto",
+            "country": "IT",
+            "grapes": "Corvina",
+            "year": "2018",
+            "style": "Red",
+            "code": "10031",
+            "food_pairing": "Red Meat, Lamb, Hard Cheese",
+            "price": 59.99,
+            "image": "Amarone-della-Valpolicella.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "is_premium": false,
+            "sku": "wre10032 ",
+            "name": "Barolo DOCG",
+            "region": "Piedmont",
+            "country": "IT",
+            "grapes": "Nebbiolo",
+            "year": "2018",
+            "style": "Red",
+            "code": "10032",
+            "food_pairing": "Red Meat, Lamb, Hard Cheese",
+            "price": 49.99,
+            "image": "barolo.jpeg",
+            "stock": 100
+        }
+    }
+]
