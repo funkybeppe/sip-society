@@ -66,9 +66,40 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #fff;
 	z-index: -1;
 }
+
+.product-container {
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+/* FILTERS SECTION STYLING */
+#navbarTogglerFilters a,
+#navbarTogglerFilters a:hover {
+    color: #6c757d;
+}
+
+#navbarTogglerFilters .dropdown-menu {
+    left: 0;
+    width: fit-content;
+}
+
+.filter-active {
+    background-color: #e9ecefab !important;
+    border: 1px solid #dee2e6;
+}
+
+.filter-active a {
+    right: 2%;
+    top: 20%;
+    color: gray;
+}
+
+
 
 /* -------------------------------- Media Queries */
 
@@ -91,5 +122,16 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }

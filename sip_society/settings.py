@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from os import path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,9 +44,10 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'url_tools',
     'home',
     'products',
-    'bag',
+    'django_countries',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +76,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'bag.contexts.bag_contents',
             ],
         },
     },
