@@ -107,7 +107,7 @@ class Products(ListView):
                 # ADD STYLE FILTER TO FILTER CONTEXT
                 elif key == 'style':
                     deluxe_style = request.GET['style']
-                    filters['style'] = 'STYLE OF WINE - ' + deluxe_style
+                    filters['style'] = 'STYLE OF WINE - ' + premium_style
                 # ADD GRAPE VARIETY FILTER TO FILTER CONTEXT
                 elif 'grapes' in key:
                     grape = request.GET['grapes']

@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% load urls %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -11,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+{% load urls %}
 
 <div class="overlay"></div>
 <div class="main-container col-lg-11 mx-auto pt-3 pb-3 mt-1 mb-3 bg-white">
