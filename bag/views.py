@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 
 # Create your views here.
 
@@ -48,8 +48,6 @@ def remove_from_bag(request, item_id):
 
         if item_id in list(bag.keys()):
             del bag[item_id]
-            if not bag[item_id]:
-                bag.pop(item_id)
         else:
             bag.pop(item_id)
 
