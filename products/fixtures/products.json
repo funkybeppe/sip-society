@@ -15,11 +15,7 @@
             "code": "10030",
             "food_pairing": "Spicy Food, Pasta and Pizza, Hard Cheese",
             "price": 15.00,
-<<<<<<< HEAD
             "image": "torre-dei-beati-2019.jpeg",
-=======
-            "image": "noimage.png",
->>>>>>> main
             "stock": 100
         }
     },
@@ -39,11 +35,7 @@
             "code": "10031",
             "food_pairing": "Red Meat, Lamb, Hard Cheese",
             "price": 59.99,
-<<<<<<< HEAD
             "image": "Amarone-della-Valpolicella.webp",
-=======
-            "image": "amarone-della-valpolicella.webp",
->>>>>>> main
             "stock": 100
         }
     },
@@ -63,11 +55,7 @@
             "code": "10032",
             "food_pairing": "Red Meat, Lamb, Hard Cheese",
             "price": 49.99,
-<<<<<<< HEAD
             "image": "barolo.jpeg",
-=======
-            "image": "barolo.webp",
->>>>>>> main
             "stock": 100
         }
     }
