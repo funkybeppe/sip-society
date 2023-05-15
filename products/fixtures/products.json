@@ -14,8 +14,8 @@
             "style": "Red",
             "code": "10030",
             "food_pairing": "Spicy Food, Pasta and Pizza, Hard Cheese",
-            "price": 15.00,
-            "image": "torre-dei-beati-2019.jpeg",
+            "price": 24.99,
+            "image": "torre-dei-beati.webp",
             "stock": 100
         }
     },
@@ -55,8 +55,28 @@
             "code": "10032",
             "food_pairing": "Red Meat, Lamb, Hard Cheese",
             "price": 49.99,
-            "image": "barolo.jpeg",
+            "image": "barolo_2.webp",
             "stock": 100
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "is_premium": false,
+            "sku": "wwh10033 ",
+            "name": "Louis Jadot Chablis",
+            "region": "Burgundy",
+            "country": "FR",
+            "grapes": "Chardonnay",
+            "year": "2021",
+            "style": "White",
+            "code": "10033",
+            "food_pairing": "Soft Cheese, Pork and Poultry, Light Fish and Shellfish",
+            "price": 21.99,
+            "image": "Louis-Jadot-Chablis.webp",
+            "stock": 12
         }
     }
 ]
