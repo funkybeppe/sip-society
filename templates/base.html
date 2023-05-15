@@ -46,7 +46,7 @@
   <title>SipSociety {% block extra_title %}{% endblock %}</title>
 </head>
 <body>
-  <header class="container-fluid fixed-top">
+    <header class="container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
               <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -120,12 +120,26 @@
               <h5 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h5>                
           </div>            
       </div>
-  </header>
+    </header>
 
 
-  {% if messages %}
-    <div class="message-container"></div>
-  {% endif %}
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    {% endif %}
 
   {% block page_header %}
   {% endblock %}
