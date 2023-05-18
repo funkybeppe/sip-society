@@ -13,17 +13,18 @@ var elements = stripe.elements();
 var style = {
     base: {
         color: '#000',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        fontSize: '14px',
         '::placeholder': {
-            color: '#aab7c4'
-        }
+            color: '#6c757d'
+        },
     },
     invalid: {
         color: '#dc3545',
         iconColor: '#dc3545'
     }
 };
-var card = elements.create('card', {style: style});
-card.mount('#card-element');
+
+var card = elements.create("card", { style: style });
+    // Stripe injects an iframe into the DOM
+card.mount("#card-element");

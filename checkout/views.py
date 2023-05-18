@@ -3,6 +3,9 @@ from django.contrib import messages
 
 from .forms import OrderForm
 
+import stripe
+import json
+
 
 def checkout(request):
     bag = request.session.get('bag', {})
