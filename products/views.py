@@ -16,6 +16,8 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    is_premium = None
+    premium_style = None
     sort = None
     direction = None
 
@@ -50,6 +52,11 @@ def all_products(request):
                 Q(style__icontains=query)
             products = products.filter(queries)
 
+        # ADD IS_PREMIUM VALUE TO CONTEXT
+        if 'is_premium' in request.GET:
+            premium = request.GET['is_premium']
+            is_premium = premium
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -57,6 +64,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'is_premium': is_premium,
     }
 
     return render(request, 'products/products.html', context)
