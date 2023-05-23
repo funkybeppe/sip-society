@@ -33,7 +33,7 @@
             "year": "2018",
             "style": "Red",
             "code": "10031",
-            "food_pairing": "Red Meat, Lamb, Hard Cheese",
+            "food_pairing": "Beef and Lamb, Pasta and Pizza, Hard Cheese",
             "price": 59.99,
             "image": "Amarone-della-Valpolicella.webp",
             "stock": 100
@@ -53,7 +53,7 @@
             "year": "2018",
             "style": "Red",
             "code": "10032",
-            "food_pairing": "Red Meat, Lamb, Hard Cheese",
+            "food_pairing": "Beef and Lamb, Pasta and Pizza, Hard Cheese",
             "price": 49.99,
             "image": "barolo_2.webp",
             "stock": 100

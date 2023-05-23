@@ -257,6 +257,10 @@ a.category-badge > span.badge:hover {
     color: black;
 }
 
+.food-pairing-list img {
+    margin-top: -10px;
+}
+
 
 /* -------------------------------- Media Queries */
 

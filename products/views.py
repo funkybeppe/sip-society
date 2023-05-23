@@ -3,8 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.core.serializers import serialize
 
-from .models import Product, Category
+from .models import Product, Category, Review
 from .forms import ProductForm
 
 # Create your views here.
@@ -59,12 +60,20 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    food_pairings_list = []
+    for food in products.values_list('food_pairing', flat=True):
+        food_values = food.split(', ')
+        food_pairings_list.extend(food_values)
+    food_pairings_list = [*set(food_pairings_list)]
+    food_pairings_list.sort()
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
         'is_premium': is_premium,
+        'food_pairing_list': food_pairings_list,
     }
 
     return render(request, 'products/products.html', context)
@@ -75,8 +84,33 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    if request.method == 'POST':
+        rating = request.POST.get('rating', 3)
+        content = request.POST.get('content', '')
+
+        if content:
+            reviews = Review.objects.filter(created_by=request.user, product=product)
+
+            if reviews.count() > 0:
+                review = reviews.first()
+                review.rating = rating
+                review.content = content
+                review.save()
+
+            else:
+                review = Review.objects.create(
+                    product=product,
+                    rating=rating,
+                    content=content,
+                    created_by=request.user
+                )
+
+            return redirect(reverse('product_detail', args=[product.id]))
+
     context = {
         'product': product,
+        'review_list': Review.objects.filter(
+                product=product).order_by('-created_at'),
     }
 
     return render(request, 'products/product_detail.html', context)

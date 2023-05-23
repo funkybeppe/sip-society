@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load products_filters %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -44,8 +45,8 @@
                         </a>
                     </p>
                     {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    {% if product.get_rating > 0 %}
+                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.get_rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
@@ -89,31 +90,35 @@
                           </li>
                         </ul>
                       </div>
-                      <!-- DISPLAY FOOD PAIRING LIST -->
-                      <p class="p-0 mb-2 font-weight-bold text-uppercase">Food pairing</p>
-                      <ul class="d-flex flex-wrap list-unstyled food-pairing-list font-size-smaller font-weight-bold">
-                              <li class="font-italic mr-3 mb-2">
-                                {% if 'Spicy' in product.food_pairing %}
-                                  <i class="fas fa-pepper-hot"></i><span> Spicy Food</span>
-                                {% elif 'Cheese' in product.food_pairing %} 
-                                  <i class="fas fa-cheese"></i><span> Soft Cheese</span>
-                                {% elif 'Dessert' in product.food_pairing %} 
-                                  <i class="fas fa-cookie"></i><span> Dessert</span>
-                                {% elif 'Greens' in product.food_pairing %} 
-                                  <i class="fas fa-seedling"></i><span> Fresh Greens</span>
-                                {% elif 'Pizza' in product.food_pairing %} 
-                                  <i class="fas fa-pizza-slice"></i><span> Pizza</span>
-                                {% elif 'Pork' in product.food_pairing %} 
-                                  <i class="fas fa-bacon"></i><span> Pork and Poultry</span>
-                                {% elif 'Fish' in product.food_pairing %}
-                                  <i class="fas fa-fish"></i><span> Light Fish and Shellfish</span>
-                                {% elif 'Root' in product.food_pairing %}
-                                  <i class="fas fa-carrot"></i><span> Root Vegetables</span>
-                                {% elif 'Beef' in product.food_pairing %}
-                                <i class="fa-solid fa-steak"></i><span> Beef and Lamb</span>
-                                {% endif %}
-                              </li>
-                      </ul>
+                    <p class="p-0 mb-2 font-weight-bold text-uppercase">Food pairing</p>
+                    <ul class="d-flex flex-wrap list-unstyled food-pairing-list font-size-smaller font-weight-bold">
+                    {% with product.food_pairing|split:", " as food_list %}
+                        {% for food in food_list %}
+                            <li class="font-italic mr-3 mb-2">
+                            {% if 'Spicy' in food %}
+                                <i class="fas fa-pepper-hot"></i>
+                            {% elif 'Cheese' in food %} 
+                                <i class="fas fa-cheese"></i>
+                            {% elif 'Dessert' in food %} 
+                                <i class="fas fa-cookie"></i>
+                            {% elif 'Greens' in food %} 
+                                <i class="fas fa-seedling"></i>
+                            {% elif 'Pizza' in food %} 
+                                <i class="fas fa-pizza-slice"></i>
+                            {% elif 'Pork' in food %} 
+                                <i class="fas fa-bacon"></i>
+                            {% elif 'Fish' in food %}
+                                <i class="fas fa-fish"></i>
+                            {% elif 'Root' in food %}
+                                <i class="fas fa-carrot"></i>
+                            {% elif 'Lamb' in food %}
+                                <i class="fa-solid fa-cow"></i>
+                            {% endif %}
+                            {{food}}
+                            </li>
+                        {% endfor %}
+                    {% endwith %}
+                    </ul>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
@@ -154,9 +159,65 @@
                                 </a>
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}"> 
                         </div>
                     </form>
+                </div>
+            </div>
+            <div class="col-xl-10 p-0 mx-auto">
+                <div class="col-12 col-lg-10 col-xl-7 p-0">
+                    <h2 class="mb-md-2">Reviews</h2>
+                    {% if request.user.is_authenticated %}
+                        <form method="post" action="." class="mt-6 mb-6 p-6 bg-gray-100 rounded-xl">
+                            {% csrf_token %}
+            
+                            <div>
+                                <label>Rating</label><br>
+                                <select name="rating">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3" selected>3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+            
+                            <div>
+                                <label>Comment</label><br>
+                                <textarea name="content"></textarea>
+                            </div>
+            
+                            <div>
+                                <button class='btn btn-black rounded-0 text-uppercase mb-5'>Submit</button>
+                            </div>
+                        </form>
+                    {% endif %}
+                    {% if review_list %}
+                        {% for review in review_list %}
+                            {% if review.product == product %}
+                                <!-- REVIEW CONTAINER -->
+                                <div class="d-flex review-container mt-3">
+                                    <!-- DEFAULT USER IMAGE -->
+                                    <div class="col-1 p-0 mr-md-2">
+                                        <img class="img-fluid" src="{{ MEDIA_URL }}user-img.png" alt="user icon">
+                                    </div>
+                                    <div class="col-11 col-md-10 p-0" >
+                                    <div class="d-md-flex justify-content-between align-items-baseline review-header">
+                                        <h6 class="col-12 col-md-6 col-lg-6 col-xl-5 m-0 mb-2 p-0"><b>{{ review.created_by }}</b></h6>
+                                        <div class="col-12 col-md-6 col-lg-6 col-xl-7 p-0 d-flex justify-content-between justify-content-md-end align-items-center">
+                                            <div class="d-flex align-items-end ml-md-2"><span><strong>{{ review.rating }}/5 &emsp;</strong></span></div>
+                                            <small>&emsp;{{ review.created_at }}</small>
+                                        </div>    
+                                    </div>
+                                        <p class="flex a-start"><q>{{ review.content}}</q></p>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                    <!-- INFO  MESSAGE FOR EMPTY REVIEWS LIST -->
+                    <p><b>There are no reviews for this product yet.</b></p>
+                    {% endif %}
                 </div>
             </div>
         </div>
