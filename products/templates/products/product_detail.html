@@ -94,25 +94,23 @@
                       <ul class="d-flex flex-wrap list-unstyled food-pairing-list font-size-smaller font-weight-bold">
                               <li class="font-italic mr-3 mb-2">
                                 {% if 'Spicy' in product.food_pairing %}
-                                  <i class="fas fa-pepper-hot"></i>
-                                {% elif 'Cheese' in food %} 
-                                  <i class="fas fa-cheese"></i>
-                                {% elif 'Dessert' in food %} 
-                                  <i class="fas fa-cookie"></i>
-                                {% elif 'Greens' in food %} 
-                                  <i class="fas fa-seedling"></i>
-                                {% elif 'Pizza' in food %} 
-                                  <i class="fas fa-pizza-slice"></i>
-                                {% elif 'Pork' in food %} 
-                                  <i class="fas fa-bacon"></i>
-                                {% elif 'Fish' in food %}
-                                  <i class="fas fa-fish"></i>
-                                {% elif 'Root' in food %}
-                                  <i class="fas fa-carrot"></i>
-                                {% elif 'Lamb' in food %}
-                                <i class="fa-solid fa-sheep"></i>
-                                {% elif 'Beef' in food %}
-                                <i class="fa-solid fa-steak"></i>
+                                  <i class="fas fa-pepper-hot"></i><span> Spicy Food</span>
+                                {% elif 'Cheese' in product.food_pairing %} 
+                                  <i class="fas fa-cheese"></i><span> Soft Cheese</span>
+                                {% elif 'Dessert' in product.food_pairing %} 
+                                  <i class="fas fa-cookie"></i><span> Dessert</span>
+                                {% elif 'Greens' in product.food_pairing %} 
+                                  <i class="fas fa-seedling"></i><span> Fresh Greens</span>
+                                {% elif 'Pizza' in product.food_pairing %} 
+                                  <i class="fas fa-pizza-slice"></i><span> Pizza</span>
+                                {% elif 'Pork' in product.food_pairing %} 
+                                  <i class="fas fa-bacon"></i><span> Pork and Poultry</span>
+                                {% elif 'Fish' in product.food_pairing %}
+                                  <i class="fas fa-fish"></i><span> Light Fish and Shellfish</span>
+                                {% elif 'Root' in product.food_pairing %}
+                                  <i class="fas fa-carrot"></i><span> Root Vegetables</span>
+                                {% elif 'Beef' in product.food_pairing %}
+                                <i class="fa-solid fa-steak"></i><span> Beef and Lamb</span>
                                 {% endif %}
                               </li>
                       </ul>
