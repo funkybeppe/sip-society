@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -8,6 +8,22 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Playfair Display', serif;
+    margin-bottom: 168px;
+}
+
+.min-vh {
+    min-height: 100vh;
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.bg-green {
+    background-color: #144333 !important;
 }
 
 /* from Bulma */
@@ -261,7 +277,87 @@ a.category-badge > span.badge:hover {
     margin-top: -10px;
 }
 
+/* FOOTER STYLING */
+footer {
+    background-color: #144333;
+}
 
+footer i {
+    color: floralwhite;
+    border: 2px solid transparent;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease-out;
+}
+
+footer i:hover {
+    border: 2px solid #fffaf08a;
+}
+
+footer .success-message {
+    color: #79f37f;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+footer .errorlist {
+    color: #ff4456;
+    margin-top: 0;
+}
+
+footer>div>div>div:nth-child(1) form p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+footer>div>div>div:nth-child(1) form p input {
+    width: 100%;
+}
+
+footer>div>div>div:nth-child(1) form p label::before {
+    content: "*";
+    color: #ff4456;
+}
+
+footer>div>div>div:nth-child(1) form .messages {
+    height: 20px;
+}
+
+.hover-underline:hover{
+    text-decoration: underline;
+}
+
+/* MAILCHIMP NEWSLETTER */
+#mc_embed_signup {
+    background: transparent;
+    clear: left;
+}
+
+#mc_embed_signup .helper_text {
+    background-color: transparent;
+}
+
+/* HEADER STYLE */
+
+header i:hover {
+    color: #6c757d;
+}
+
+i {
+    font-size: 20px;
+}
+
+.notification {
+    top: 52%;
+    right: 0px;
+    height: 16px;
+    line-height: 16px;
+    width: 16px;
+    background-color: #aa0010;
+    border-radius: 50%;
+    text-align: center;
+    font-size: smaller;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
