@@ -7,6 +7,9 @@ from django.core.serializers import serialize
 
 from .models import Product, Category, Review
 from .forms import ProductForm
+from wishlist.forms import SetWishlistRelation
+from wishlist.models import WishlistLine
+
 
 # Create your views here.
 
@@ -83,6 +86,8 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    current_review = None
+    current_wishlist_line = None
 
     if request.method == 'POST':
         rating = request.POST.get('rating', 3)
@@ -107,10 +112,20 @@ def product_detail(request, product_id):
 
             return redirect(reverse('product_detail', args=[product.id]))
 
+    if request.user.is_authenticated and \
+        WishlistLine.objects.filter(
+            Q(user=request.user) & Q(product=product)).exists():
+        current_wishlist_line = WishlistLine.objects.get(
+            user=request.user, product=product)
+
+    add_to_wishlist_form = SetWishlistRelation(data=request.GET)
+
     context = {
         'product': product,
         'review_list': Review.objects.filter(
                 product=product).order_by('-created_at'),
+        'add_to_wishlist_form': add_to_wishlist_form,
+        'current_wishlist_line': current_wishlist_line,
     }
 
     return render(request, 'products/product_detail.html', context)
