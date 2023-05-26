@@ -39,6 +39,10 @@ body {
     text-transform: uppercase;
 }
 
+.logo {
+    color: #F8D105;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -268,13 +272,17 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+#div_id_is_premium {
+    display: none;
+}
+
+#div_id_rating {
+    display: none;
+}
+
 /* FOOD PAIRING LIST STYLING */
 .food-pairing-list i {
     color: black;
-}
-
-.food-pairing-list img {
-    margin-top: -10px;
 }
 
 /* FOOTER STYLING */
@@ -358,6 +366,10 @@ i {
     text-align: center;
     font-size: smaller;
 }
+
+.nav-white {
+    color: white !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -391,4 +403,37 @@ i {
     body {
         height: calc(100vh - 116px);
     }
+}
+
+@media (max-width: 360px) {
+
+    .main-logo-link {
+        padding-right: 0;
+    }
+
+    .bag-link {
+        padding-right: 0;
+    }
+
+    .navbar {
+        padding: 4px;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .shop-now-button {
+        min-width: 160px;
+    }
+
+    .navbar-collapse {
+        padding: 4px;
+    }
+
+    .nav-link {
+        padding-left: 8px;
+        padding-right: 4px;
+    }
+
 }
