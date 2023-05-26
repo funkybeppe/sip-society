@@ -1,3 +1,4 @@
+from django.db.models import F
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -21,7 +22,6 @@ def all_products(request):
     query = None
     categories = None
     is_premium = None
-    premium_style = None
     sort = None
     direction = None
 
@@ -38,6 +38,15 @@ def all_products(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
+            if sortkey != 'rating' not in sortkey:
+                products = products.order_by(sortkey)
+            elif 'rating' in sortkey:
+                if direction == 'asc':
+                    products = products.order_by(
+                        F('rating').asc(nulls_last=True))
+                elif direction == 'desc':
+                    products = products.order_by(
+                        F('rating').desc(nulls_last=True))
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
@@ -110,8 +119,9 @@ def product_detail(request, product_id):
                     created_by=request.user
                 )
                 messages.success(request, 'Review successfully added!')
-
             return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.warning(request, 'Review cannot be blank!')
 
     if request.user.is_authenticated and \
         WishlistLine.objects.filter(
