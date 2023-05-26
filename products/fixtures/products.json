@@ -6,7 +6,7 @@
             "category": 1,
             "is_premium": false,
             "sku": "wre10030 ",
-            "name": "Torre Dei Beati",
+            "name": "Torre Dei Beati Montepulciano",
             "region": "Marche IGP",
             "country": "IT",
             "grapes": "Montepulciano, Sangiovese",
@@ -76,7 +76,107 @@
             "food_pairing": "Soft Cheese, Pork and Poultry, Light Fish and Shellfish",
             "price": 21.99,
             "image": "Louis-Jadot-Chablis_2.webp",
-            "stock": 12
+            "stock": 100
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "is_premium": false,
+            "sku": "wre10034",
+            "name": "Don Jacobo Rioja Reserva",
+            "region": "Rioja",
+            "country": "ES",
+            "grapes": "Tempranillo",
+            "year": "2020",
+            "style": "Red",
+            "code": "10034",
+            "food_pairing": "Beef and Lamb, Pasta and Pizza, Hard Cheese",
+            "price": 18.99,
+            "image": "rioja-reserva.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "category": 1,
+            "is_premium": false,
+            "sku": "wre10035",
+            "name": "Cloudy Bay Pinot Noir",
+            "region": "Marlborough",
+            "country": "NZ",
+            "grapes": "Pinot Noir",
+            "year": "2020",
+            "style": "Red",
+            "code": "10035",
+            "food_pairing": "Beef and Lamb, Pasta and Pizza, Hard Cheese, Pork and Poultry, Fresh Greens",
+            "price": 32.00,
+            "image": "pinot-noir.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "is_premium": false,
+            "sku": "wwh10036 ",
+            "name": "Walker Bay Sauvignon Blanc",
+            "region": "Cape South Coast",
+            "country": "ZA",
+            "grapes": "Sauvignon Blanc",
+            "year": "2021",
+            "style": "White",
+            "code": "10036",
+            "food_pairing": "Soft Cheese, Pork and Poultry, Light Fish and Shellfish",
+            "price": 16.79,
+            "image": "sauvignon-blanc.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "is_premium": false,
+            "sku": "wwh10037 ",
+            "name": "Nellaluna Pinot Grigio",
+            "region": "Delle Venezie",
+            "country": "IT",
+            "grapes": "Pinot Grigio",
+            "year": "2021",
+            "style": "White",
+            "code": "10037",
+            "food_pairing": "Soft Cheese, Pork and Poultry, Light Fish and Shellfish",
+            "price": 18.79,
+            "image": "pinot-grigio.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "is_premium": false,
+            "sku": "wwh10038 ",
+            "name": "Cave de l'Ormarine Picpoul de Pinet",
+            "region": "Languedoc",
+            "country": "FR",
+            "grapes": "Picpoul",
+            "year": "2022",
+            "style": "White",
+            "code": "10038",
+            "food_pairing": "Soft Cheese, Light Fish and Shellfish, Fresh Greens",
+            "price": 21.75,
+            "image": "picpoul.webp",
+            "stock": 100
         }
     }
 ]

@@ -127,6 +127,7 @@ def product_detail(request, product_id):
                 product=product).order_by('-created_at'),
         'add_to_wishlist_form': add_to_wishlist_form,
         'current_wishlist_line': current_wishlist_line,
+        'product_json': serialize('json', Product.objects.filter(pk=product.pk)),
     }
 
     return render(request, 'products/product_detail.html', context)
