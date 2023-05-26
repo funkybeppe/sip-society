@@ -109,6 +109,7 @@ def product_detail(request, product_id):
                     content=content,
                     created_by=request.user
                 )
+                messages.success(request, 'Review successfully added!')
 
             return redirect(reverse('product_detail', args=[product.id]))
 
