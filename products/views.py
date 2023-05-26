@@ -18,7 +18,7 @@ from wishlist.models import WishlistLine
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('style')
     query = None
     categories = None
     is_premium = None
