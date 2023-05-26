@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/home-image.jpg') no-repeat center center fixed;
+    background: url('/media/home-image.webp') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -403,6 +403,18 @@ i {
     body {
         height: calc(100vh - 116px);
     }
+}
+
+@media (max-width: 500px) {
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    .shop-now-button {
+        min-width: 200px;
+    }
+
 }
 
 @media (max-width: 360px) {
