@@ -178,5 +178,125 @@
             "image": "picpoul.webp",
             "stock": 100
         }
+    },
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "category": 2,
+            "is_premium": false,
+            "sku": "wwh10039 ",
+            "name": "Lembranzas Albarino",
+            "region": "Rias Baixas",
+            "country": "ES",
+            "grapes": "Albarino",
+            "year": "2020",
+            "style": "White",
+            "code": "10039",
+            "food_pairing": "Rich Fish, Light Fish and Shellfish, Fresh Greens",
+            "price": 14.99,
+            "image": "albarino.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "is_premium": false,
+            "sku": "wro10040 ",
+            "name": "Mirabello Pinot Grigio Rose",
+            "region": "Piedmont",
+            "country": "IT",
+            "grapes": "Pinot Grigio, Pinot Noir",
+            "year": "2022",
+            "style": "Rose",
+            "code": "10040",
+            "food_pairing": "Spicy Food, Pork and Poultry, Pasta and Pizza, Light Fish and Shellfish",
+            "price": 13.99,
+            "image": "pinot-grigio-blush.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "is_premium": false,
+            "sku": "wro10041 ",
+            "name": "Chateau Routas Rose",
+            "region": "Provence",
+            "country": "FR",
+            "grapes": "Grenache, Syrah, Cabernet Sauvignon",
+            "year": "2022",
+            "style": "Rose",
+            "code": "10041",
+            "food_pairing": "Spicy Food, Pork and Poultry, Pasta and Pizza, Light Fish and Shellfish",
+            "price": 15.75,
+            "image": "provence-rose.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "is_premium": false,
+            "sku": "wro10042 ",
+            "name": "Or & Azur Rose",
+            "region": "Languedoc",
+            "country": "FR",
+            "grapes": "Cinsault, Grenache",
+            "year": "2019",
+            "style": "Rose",
+            "code": "10042",
+            "food_pairing": "Spicy Food, Light Fish and Shellfish, Hard Cheese, Dessert",
+            "price": 17.49,
+            "image": "languedoc.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "is_premium": false,
+            "sku": "wro10043 ",
+            "name": "Cabriz Colheita 2018",
+            "region": "Dão",
+            "country": "PT",
+            "grapes": "Touriga Nacional, Afroucheiro",
+            "year": "2018",
+            "style": "Rose",
+            "code": "10043",
+            "food_pairing": "Spicy Food, Pork and Poultry, Light Fish and Shellfish, Fresh Greens",
+            "price": 18.15,
+            "image": "portugal-rose.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "category": 3,
+            "is_premium": false,
+            "sku": "wro10044 ",
+            "name": "Golden State Zinfandel Rose",
+            "region": "California",
+            "country": "US",
+            "grapes": "Zinfandel",
+            "year": "2021",
+            "style": "Rose",
+            "code": "10044",
+            "food_pairing": "Spicy Food, Rich Fish, Pork and Poultry, Light Fish and Shellfish",
+            "price": 17.89,
+            "image": "zinfandel-rose.webp",
+            "stock": 100
+        }
     }
 ]
