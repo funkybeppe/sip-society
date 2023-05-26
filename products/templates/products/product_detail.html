@@ -190,33 +190,38 @@
                     </form>
                 </div>
             </div>
-            <div class="col-xl-10 p-0 mx-auto">
-                <div class="col-12 col-lg-10 col-xl-7 p-0">
+            <div class="col-xl-10 p-0">
+                <div class="col-12 col-lg-10 col-xl-7 col-md-10 col-sm-10 col-xs-8 mx-auto px-3">
                     <h2 class="mb-md-2">Reviews</h2>
+                    <hr>
                     {% if request.user.is_authenticated %}
-                        <form method="post" action="." class="mt-6 mb-6 p-6 bg-gray-100 rounded-xl">
-                            {% csrf_token %}
-            
-                            <div>
-                                <label>Rating</label><br>
-                                <select name="rating">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3" selected>3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
+                        <div class="card">
+                            <div class="card-header">
+                            Leave a review
                             </div>
-            
-                            <div>
-                                <label>Comment</label><br>
-                                <textarea name="content"></textarea>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    
+                                    <form method="post" action="." class="mt-6 mb-6 p-6 bg-gray-100 rounded-xl">
+                                        {% csrf_token %}
+                                        <label>Rating</label><br>
+                                        <select name="rating">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3" selected>3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <label>Comment</label><br>
+                                        <textarea name="content"></textarea>
+                                        <br>
+                                        <button class='btn btn-black rounded-0 text-uppercase mb-'>Submit</button>
+                                    </form>
+                                </p>
                             </div>
-            
-                            <div>
-                                <button class='btn btn-black rounded-0 text-uppercase mb-5'>Submit</button>
-                            </div>
-                        </form>
+                        </div>
                     {% endif %}
                     {% if review_list %}
                         {% for review in review_list %}
@@ -241,8 +246,9 @@
                             {% endif %}
                         {% endfor %}
                     {% else %}
+                    <br>
                     <!-- INFO  MESSAGE FOR EMPTY REVIEWS LIST -->
-                    <p><b>There are no reviews for this product yet.</b></p>
+                    <h4>There are no reviews for this product yet.</h4>
                     {% endif %}
                 </div>
             </div>
