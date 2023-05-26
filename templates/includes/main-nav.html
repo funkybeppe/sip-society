@@ -1,19 +1,20 @@
 <div class="collapse navbar-collapse" id="main-nav">
+    <br>
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'home' %}">
+            <a class="logo-font font-weight-bold hover-underline nav-link text-white mr-5" href="{% url 'home' %}">
                 Home
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="{% url 'products' %}" id="all-products-link">
+            <a class="logo-font font-weight-bold hover-underline nav-link text-white mr-5" href="{% url 'products' %}" id="all-products-link">
                 All Products
             </a>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="wines-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold hover-underline nav-link text-white mr-5" href="#" id="wines-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Wines
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wines-link">
@@ -21,6 +22,48 @@
                 <a href="{% url 'products' %}?category=white_wines" class="dropdown-item">White Wines</a>
                 <a href="{% url 'products' %}?category=rose_wines" class="dropdown-item">Rose' Wines</a>
                 <a href="{% url 'products' %}?category=sparkling_wines" class="dropdown-item">Sparkling Wines</a>
+            </div>
+        </li>
+
+        <li class="nav-item d-lg-none">
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'wishlist' %}">
+                Wishlist
+            </a>
+        </li>
+        <li class="list-inline-item">
+            <a class="logo-font font-weight-bold text-white nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Search <i class="fas fa-search fa-sm"></i>
+            </a>
+            <div class="dropdown-menu bg-green border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+                <form class="form" method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                        <div class="input-group-append">
+                            <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        <li class="list-inline-item dropdown">
+            <a class="logo-font font-weight-bold text-white nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Profile
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                    {% endif %}
+                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
             </div>
         </li>
     </ul>
