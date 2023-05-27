@@ -280,6 +280,23 @@ a.category-badge > span.badge:hover {
     display: none;
 }
 
+/* PRODUCT DETAILS STYLING */
+
+.text-yellow {
+    color: #ffc107;
+    width: 130px;
+}
+
+.text-red {
+    color: #ff4456;
+    width: 130px;
+}
+
+.addtobag-button {
+    padding: 6px 10px;
+}
+
+
 /* FOOD PAIRING LIST STYLING */
 .food-pairing-list i {
     color: black;

@@ -2,9 +2,10 @@
 
     // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
+        const stock = $(`.increment-qty_${itemId}`).data('stock')
         var currentValue = parseInt($(`.id_qty_${itemId}`).val());
         var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > 98;
+        var plusDisabled = currentValue >= stock;
         $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
         $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
     }
