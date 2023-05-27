@@ -298,5 +298,105 @@
             "image": "zinfandel-rose.webp",
             "stock": 100
         }
+    },
+    {
+        "pk": 16,
+        "model": "products.product",
+        "fields": {
+            "category": 4,
+            "is_premium": false,
+            "sku": "wsp10045 ",
+            "name": "Mionetto Prosecco DOC",
+            "region": "Treviso",
+            "country": "IT",
+            "grapes": "Glera",
+            "year": "2021",
+            "style": "Sparkling",
+            "code": "10045",
+            "food_pairing": "Spicy Food, Light Fish and Shellfish, Hard Cheese, Dessert",
+            "price": 22.89,
+            "image": "prosecco.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.product",
+        "fields": {
+            "category": 4,
+            "is_premium": false,
+            "sku": "wsp10046 ",
+            "name": "Veuve Clicquot Brut Champagne",
+            "region": "Champagne",
+            "country": "FR",
+            "grapes": "Pinot Noir, Pinot Meunier, Chardonnay",
+            "year": "2018",
+            "style": "Sparkling",
+            "code": "10046",
+            "food_pairing": "Spicy Food, Light Fish and Shellfish, Hard Cheese, Dessert",
+            "price": 48.00,
+            "image": "champagne.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.product",
+        "fields": {
+            "category": 4,
+            "is_premium": false,
+            "sku": "wsp10047 ",
+            "name": "Bolney Estate Brut",
+            "region": "Sussex",
+            "country": "GB",
+            "grapes": "Pinot Noir, Seyval Blanc, Chardonnay",
+            "year": "2018",
+            "style": "Sparkling",
+            "code": "10047",
+            "food_pairing": "Spicy Food, Light Fish and Shellfish, Hard Cheese, Dessert",
+            "price": 28.00,
+            "image": "english-sparkling.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.product",
+        "fields": {
+            "category": 4,
+            "is_premium": false,
+            "sku": "wsp10048 ",
+            "name": "Pedregosa Cava",
+            "region": "Cava",
+            "country": "ES",
+            "grapes": "Parellada, Macabeo, Xarel-lo",
+            "year": "2020",
+            "style": "Sparkling",
+            "code": "10048",
+            "food_pairing": "Spicy Food, Light Fish and Shellfish, Hard Cheese, Dessert",
+            "price": 19.99,
+            "image": "cava-sparkling.webp",
+            "stock": 100
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.product",
+        "fields": {
+            "category": 4,
+            "is_premium": false,
+            "sku": "wsp10049",
+            "name": "Oyster Bay Sparkling Rose",
+            "region": "Marlborough",
+            "country": "NZ",
+            "grapes": "Pinot Noir, Chardonnay",
+            "year": "2021",
+            "style": "Sparkling",
+            "code": "10049",
+            "food_pairing": "Spicy Food, Light Fish and Shellfish, Hard Cheese, Dessert",
+            "price": 21.89,
+            "image": "sparkling-rose.webp",
+            "stock": 100
+        }
     }
 ]
