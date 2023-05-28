@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /checkout/
+Sitemap: https://sip-society-wine-shop.herokuapp.com/sitemap.xml
