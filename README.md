@@ -120,10 +120,18 @@ The structure of the website is divided into multiple pages and the content is d
 
 #### Wireframes
 The wireframes for mobile and desktop were created with Balsamiq tool.
+<img width="554" alt="Screenshot 2023-05-29 at 20 16 24" src="https://github.com/funkybeppe/sip-society/assets/105980082/aedd1728-d609-4868-857b-203a4603a5af">
+<img width="550" alt="Screenshot 2023-05-29 at 20 16 33" src="https://github.com/funkybeppe/sip-society/assets/105980082/1aa62a95-9a6c-462c-8ff6-3542e1818071">
+<img width="547" alt="Screenshot 2023-05-29 at 20 16 47" src="https://github.com/funkybeppe/sip-society/assets/105980082/7492b625-611d-4425-a2f5-cbe13aae2032">
+<img width="525" alt="Screenshot 2023-05-29 at 20 17 03" src="https://github.com/funkybeppe/sip-society/assets/105980082/dadf68f8-9af3-4932-91fe-5ac4c8c29aaf">
+<img width="434" alt="Screenshot 2023-05-29 at 20 17 20" src="https://github.com/funkybeppe/sip-society/assets/105980082/160d1907-eb73-4122-9744-e4c40b97b416">
+
+
 
 
 #### Database
 The project uses the PostgreSQL relational database for storing the data.
+![Screenshot 2023-05-29 at 18 14 16](https://github.com/funkybeppe/sip-society/assets/105980082/544a0ff0-e971-4361-a0d3-8f104750927e)
 
 
 ### Surface
@@ -132,8 +140,11 @@ The project uses the PostgreSQL relational database for storing the data.
 All the colours were selected with the eyedropper plugin from the website cover, to maintain chromatic harmony.
 
 * The primary colour scheme was used for the most of the existent text on the website, in either dark or bright colours for creating a good contrast. The bottle green color has been used repetedly as a main colour, inspired by the color of the wine bottles.
+ ••![Screenshot 2023-05-29 at 16 59 29](https://github.com/funkybeppe/sip-society/assets/105980082/0874520d-5fe3-4057-8f34-9d00bf6369a0)
 
 * The secondary colour scheme was used for buttons, warnings, errors or for highlighting important information.
+ ••![Screenshot 2023-05-29 at 17 04 27](https://github.com/funkybeppe/sip-society/assets/105980082/9cd80b5f-ab29-4a5a-a9ee-2e128ae40c19)
+
 
 #### Fonts
 * The font I used for this site was imported from [Google Fonts](https://fonts.google.com/):
@@ -145,6 +156,8 @@ All the colours were selected with the eyedropper plugin from the website cover,
 
 ## Business Model
 * The business model chosen for this project is Businesgit stas to Customer, as the main purpose of the website is to deliver final products to customers. This model was implemented using an interactive, attractive and intuitive interface that gives the clients an upgraded experience for shopping.
+
+![Screenshot 2023-05-29 at 17 15 02](https://github.com/funkybeppe/sip-society/assets/105980082/8ba5a088-3a6c-49ac-86d1-1237df844edf)
 
 
 * The store offers a diverse selections of wines categorised as Red, Rose, White and Sparkling. Customers can order any quantity of the products within the limit of available stock.
@@ -165,30 +178,48 @@ Every user can access the page with the product catalogue. The items are listed 
 
 * On every page with a catalogue of products, there is a section for filtering and sorting.
 * The sorting feature is available for the user by selecting a value from the available options that will update the products' list   accordingly.
+ <img width="464" alt="Screenshot 2023-05-29 at 18 17 08" src="https://github.com/funkybeppe/sip-society/assets/105980082/149370f6-cbda-42bc-a81b-7e22cc45de0f">
+
 * All the products are listed including relevant information for the users.
+ <img width="1133" alt="Screenshot 2023-05-29 at 18 17 46" src="https://github.com/funkybeppe/sip-society/assets/105980082/dfd28812-8171-4493-9393-6bda548ee2f2">
+
 * Every products has a details page that includes full specifications.
+ <img width="925" alt="Screenshot 2023-05-29 at 18 18 27" src="https://github.com/funkybeppe/sip-society/assets/105980082/2a255eb2-d184-4d7e-9be2-cbb59ae4189b">
+
 
 #### Product Reviews
 
 * On the Product Details page there is a list with all the reviews posted on the website and it is visible to all types of users. All the reviews have the same design and type of content. Important details are displayed such as Username, Date and time, Rating number and the Message posted.
+ <img width="683" alt="Screenshot 2023-05-29 at 18 19 04" src="https://github.com/funkybeppe/sip-society/assets/105980082/10634e36-e96e-4088-b0e0-f668c67ec5c0">
+
 * When a user is authenticated and he never posted a review, a form is provided for leaving a message and a star rating.
+ <img width="320" alt="Screenshot 2023-05-29 at 18 19 29" src="https://github.com/funkybeppe/sip-society/assets/105980082/3d0ac870-674d-4544-b158-7bc64d0fda96">
+
 * Only one review per person each item
 * For authenticated users that already posted a review, they can submit another one which will update the review with new message and new rating number. This is to prevent a user to submit too many and compromise the rating.
 
 #### Wishlist
 
 * On the Product Details page there is an interactive feature that is only available for logged-in users. A user has the possibility to add a product to the wishlist through a form that uses a heart icon as a button. The heart shape defines the state of the product in the wishlist database.
+<img width="179" alt="Screenshot 2023-05-29 at 18 19 46" src="https://github.com/funkybeppe/sip-society/assets/105980082/3fa09d35-8247-4cc3-a2a5-d786169a14ce">
+<img width="202" alt="Screenshot 2023-05-29 at 18 19 52" src="https://github.com/funkybeppe/sip-society/assets/105980082/8c62f126-7aaa-4e64-8013-0d06f7999099">
 
 
 * In the Wishlist page there are listed all the favourite items of the user with a design similar to the one created for the Products pages. Sorting section is also available and every element is linked to a Product Details page.
+<img width="254" alt="Screenshot 2023-05-29 at 18 20 14" src="https://github.com/funkybeppe/sip-society/assets/105980082/c8f347a9-3c8c-4a89-8c24-883dc68dcd58">
+
 
 #### Bag
 * A feature for adding a product to the shopping bag has been created and included in the Products, Product Details and Wishlist pages. This is a form for updating the products existing in the shopping bag and also their quantity.
 * In the Bag page there are listed the added items with details about quantity and price. Any item can be removed by clicking on the remove link and also the quantity can be updated.
+<img width="1127" alt="Screenshot 2023-05-29 at 18 20 37" src="https://github.com/funkybeppe/sip-society/assets/105980082/da3f880f-0689-4912-a455-83f439908d3e">
 
 #### Checkout
 * The Checkout page represents the final step in completing the order.
 A form for personal, delivery and payment details is displayed for the user to fill in with valid data. The payment input has its own Stripe-implemented validation.
+<img width="572" alt="Screenshot 2023-05-29 at 18 21 39" src="https://github.com/funkybeppe/sip-society/assets/105980082/a6431ee6-beae-457f-b904-dbc15d20c7b9">
+<img width="582" alt="Screenshot 2023-05-29 at 18 21 54" src="https://github.com/funkybeppe/sip-society/assets/105980082/81403308-11a8-4ea4-a315-5b933087db30">
+
 * An order summary is displayed with details about the products and cost.
 * After the order is completed, the user is sent to a *Checkout Success * page with full specifications and details.
 
@@ -196,12 +227,19 @@ A form for personal, delivery and payment details is displayed for the user to f
 The User Profile page gives the user access to individual and private features.
 
 * The page includes a form for adding or updating the delivery details. These details are saved in the database and whenever the user is logged in and wants to make an order, the values will be automatically set in the checkout form.
+<img width="610" alt="Screenshot 2023-05-29 at 18 22 45" src="https://github.com/funkybeppe/sip-society/assets/105980082/905fa348-75f3-409c-b179-46719cda2e8a">
 
 * Another important feature is the Orders history which is represented by a table with all the orders created by the user. Any order element has a details page that can be accessed by clicking on the order number value.
+<img width="619" alt="Screenshot 2023-05-29 at 18 22 55" src="https://github.com/funkybeppe/sip-society/assets/105980082/82130fb7-6188-4bac-be8d-cd25bb03e68b">
 
 #### Admin
 The admin account was created as a superuser account from the terminal and also has access to the admin panel.
 * An admin user have access to features for adding a new product, edit a product's details and delete product. The last two implementations are available on the Products and Product Details page and only for staff accounts.
+* <img width="241" alt="Screenshot 2023-05-29 at 18 23 11" src="https://github.com/funkybeppe/sip-society/assets/105980082/09d7077a-8d5b-46f5-8ec1-df0e604ddb7a">
+
+* <img width="599" alt="Screenshot 2023-05-29 at 18 23 28" src="https://github.com/funkybeppe/sip-society/assets/105980082/c2e17d60-6532-4a7f-bcc5-1180637d235c">
+
+* <img width="599" alt="Screenshot 2023-05-29 at 18 23 41" src="https://github.com/funkybeppe/sip-society/assets/105980082/769a3340-a4d6-41fd-93a6-2c12ccbbb946">
 
 ### Future Feature Considerations
 * Implementing a chat feature for communication between customers and staff members. This would be useful for any client that has an issue on the website and also will create a better and faster way of finding solutions. 
@@ -279,7 +317,7 @@ Gmail - for sending emails using the SMTP server
 * django-phonenumber-field
 
 ## Testing
-The testing documentation can be found at TESTING.MD
+The testing documentation can be found at [TESTING.MD](https://github.com/funkybeppe/sip-society/edit/main/TESTING.md)
 
 ## Deployment
 ### Deploy on Heroku
