@@ -30,6 +30,7 @@ This site was created respecting the Five Planes Of Website Design:
  
  ### PRODUCTS
    * PRODUCT LIST: As a user, I want to see a catalog with all the products sorted in categories.
+   * PRODUCT DETAILS: As a user, I want to see a page with full specifications for every product, so I can easily decide which one I would want to buy.
    * SORTING: As a user, I want to be able to sort the listed products, so I can easily find the ones I am interested to buy.
    * AVAILABILITY: As a user, I want to be able to see the stock availability for low stock products.
    * SHOPPING BAG: As a user, I want to be able to add any product to the shopping bag in a selected quantity.
@@ -43,7 +44,6 @@ This site was created respecting the Five Planes Of Website Design:
    * PRODUCT ADD: As a logged-in user, I want to be able to add/remove any product from the Wishlist.
    * PRODUCT LIST: As a logged-in user, I want to see all the products added to Wishlist.
    * SORTING: As a logged-in user, I want to be able to sort the products in the Wishlist.
-   * ADD TO BAG: As a logged-in user, I want to be able to add products to the shopping bag from the Wishlist page.
 
  ### SHOPPING BAG
    * BAG REVIEW: As a user, I want to see all the products I added to the shopping bag.
