@@ -164,8 +164,7 @@ All epics and user stories implementation progress was registered using GitHub P
 Every user can access the page with the product catalogue. The items are listed attractively and their design is adapted to all devices.
 
 * On every page with a catalogue of products, there is a section for filtering and sorting.
-* The filters can be selected from a dropdown
-  The sorting feature is available for the user by selecting a value from the available options that will update the products' list   accordingly.
+* The sorting feature is available for the user by selecting a value from the available options that will update the products' list   accordingly.
 * All the products are listed including relevant information for the users.
 * Every products has a details page that includes full specifications.
 
