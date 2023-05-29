@@ -484,12 +484,12 @@ Outcome: Pass
 
 ## ADDITIONAL MANUAL TESTING
 
-##### Error Handling
+#### Error Handling
 
 Ensure that 404 HTTP errors display the custom 404.html.
 Stress Test: Input a random route in the URL that can't be found in the declared paths of the project
 
-##### Interface Interaction
+#### Interface Interaction
 Ensure all interactive elements respond appropriately:
 Desktop:
 All navbar elements correctly respond to hovering.
@@ -500,17 +500,17 @@ All navbar elements correctly respond to touch.
 All buttons correctly respond to touch.
 All authentication links correctly respond to touch
 
-##### Links
+#### Links
 Ensure the external links to social media present in the footer open up in new tabs.
 
 ### Browser Testing
 The website was tested on different browser for assuring the features work accordingly.
 
-Chrome
-Edge
-Safari
-Opera
-Firefox
+* Chrome
+* Edge
+* Safari
+* Opera
+* Firefox
 
 ### Code Validation
 
