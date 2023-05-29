@@ -206,3 +206,130 @@ The admin account was created as a superuser account from the terminal and also 
 * Implementing a chat feature for communication between customers and staff members. This would be useful for any client that has an issue on the website and also will create a better and faster way of finding solutions. 
 * Creating a feature for easily sending advertising emails to all the customers. This would be a default template form to be filled and the email will be automatically sent to the clients.
 * Create a better platform for Admin, so that some content and features available for users are not for admins. A page to display all the orders without accessing Django Admin.
+
+## Responsive Layout and Design
+The project design has been adapted to all types of devices using Bootstrap predefined breakpoints. For intermediate devices where the design didn't fit accordingly, custom breakpoints were used.
+
+#### Breakpoints:
+- max-width:360px(extra small devices)
+- max-width:500px(small devices)
+- max-width:991px(medium devices)
+- min-width:992px(medium devices)
+- min-width:1200px(large devices)
+#### Tested devices:
+- Moto G4 
+- iPhone SE 
+- iPhone XR 
+- iPhone 11 
+- iPhone 13
+- iPhone 5/SE 
+- iPhone 6/7/8 
+- Ipad
+- Ipad Air 
+- Ipad Mini
+- Ipad Pro 
+- Pixel 5 
+- Surface Duo 
+- Surface Pro 7 
+- Nest Hub 
+- Nest Hub Max
+- Samsung Galaxy S20 Ultra 
+- Samsung Galaxy S8 
+- Galaxy Note 2 
+- Galaxy Tab S4
+- Macbook Pro 14"
+- Samsung Odyssey G9 49"
+
+## Tools Used
+
+GitHub - used for hosting the source code of the program
+Visual Studio - for writing and testing the code
+Heroku - used for deploying the project
+Balsamiq - for creating the wireframes
+LucidChart - used for creating the Database relational schema
+Favicon.io - used for generating the website favicon
+TinyPNG - for compressing the images
+Font Awesome - for creating atractive UX with icons
+Bootstrap4 - for adding predifined styled elements and creating responsiveness
+Google Fonts - for typography
+JsHint - used for validating the javascript code
+pycodestyle - used for validating the python code
+HTML - W3C HTML Validator - used for validating the HTML
+CSS - Jigsaw CSS Validator - used for validating the CSS
+Chrome Del Tools - for debugging the project
+W.A.V.E. - for testing accessibility
+AWS - for storing media and static data
+ElephantSql - for hosting the PostgresSql database migrated from Heroku LightHouse - for testing performance
+Gmail - for sending emails using the SMTP server
+
+### Python packages
+* django
+* django-allauth
+* dj-database-url
+* psycopg2-binary
+* gunicorn
+* heroku
+* django-heroku
+* boto3
+* django-storages
+* pillow
+* django-countries
+* stripe
+* django-phonenumber-field
+
+## Testing
+The testing documentation can be found at TESTING.MD
+
+## Deployment
+### Deploy on Heroku
+1. Create Pipfile
+In the terminal enter the command  pip3 freeze > requirements.txt, and a file with all the requirements will be created.
+
+2. Setting up Heroku
+* Go to the Heroku website (https://www.heroku.com/)
+* Login to Heroku and choose Create App
+* Click New and Create a new app
+* Choose a name and select your location
+* Go to the Resources tab
+* From the Resources list select Heroku Postgres
+* Navigate to the Deploy tab
+* Click on Connect to Github and search for your repository
+* Navigate to the Settings tab
+* Reveal Config Vars and add your Cloudinary, Database URL (from Heroku-Postgres) and Secret key.
+
+3. Deployment on Heroku
+* Go to the Deploy tab.
+* Choose the main branch for deploying and enable automatic deployment
+* Select manual deploy for building the App
+
+### Fork the repository
+For creating a copy of the repository on your account and change it without affecting the original project, useFork directly from GitHub:
+
+* On My Repository Page, press Fork in the top right of the page
+* A forked version of my project will appear in your repository
+
+### Clone the repository
+For creating a clone of the repository on your local machine, useClone:
+
+* On My Repository Page, click the Code green button, right above the code window
+* Chose from HTTPS, SSH and GitClub CLI format and copy (preferably HTTPS)
+* In your IDE open Git Bash
+* Enter the command git clone followed by the copied URL
+* Your clone was created
+
+## Credits
+### Content
+* The content of the website is fictive.
+
+### Media
+* All products images used on the site were taken from Google
+
+### Code 
+* Templates were taken and adapted from Code Institute project Boutique Ado
+* The Review code was taken and adapted from Stackoverflow
+* The loading spinner was taken and adapted from Code Institute project Boutique Ado
+
+## Acknowledgements
+Code Institute for all the material and support offered
+Slack community for great involvement in helping each other
+My partner Jess for everyday support and patience
