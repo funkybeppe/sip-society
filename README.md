@@ -1,11 +1,12 @@
 # SipSociety - Online Wine Shop
+<img width="1342" alt="Screenshot 2023-05-29 at 12 34 48" src="https://github.com/funkybeppe/sip-society/assets/105980082/7238c822-7a48-4836-baa9-363ae68f0c27">
 
 # Overview
 SipSociety is an e-commerce website created for a fictive wine shop located in London, UK. The main purpose of the project was to implement a fully functional online store that will make the process of selecting and purchasing wine products much easier for customers.
 The users are given the possibility to see every product's details, create a wishlist, add items to the shopping bag, purchase with an online payment and access orders' history. Also, the staff members have permission for controlling the data using specially designed features.
 The website was developed using Python(Django), HTML, CSS and JavaScript. The data was stored in a PostgreSQL database using ElephantSql for manipulation.
 
-The fully deployed project can be accessed at this link.
+The fully deployed project can be accessed at [this link](https://sip-society-wine-shop.herokuapp.com/).
 
 # UX
 This site was created respecting the Five Planes Of Website Design:
@@ -135,7 +136,7 @@ All the colours were selected with the eyedropper plugin from the website cover,
 * The secondary colour scheme was used for buttons, warnings, errors or for highlighting important information.
 
 #### Fonts
-* The font I used for this site was imported from Google Fonts:
+* The font I used for this site was imported from [Google Fonts](https://fonts.google.com/):
   Body and Logo: Playfair Display, serif
   
 #### Visual Effects
