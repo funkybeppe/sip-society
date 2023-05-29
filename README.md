@@ -15,6 +15,7 @@ This site was created respecting the Five Planes Of Website Design:
 ### User Stories:
 
  ### VIEWING AND NAVIGATION
+   * PURPOSE: As a user, I want to understand the purpose of the website from the first interaction with it content.
    * RESPONSIVENESS: As a user, I want to be able to easily use the site functionalities on all viewports, so I can shop the products from any device.
    * FOOTER: As a user, I want to see a footer with relevant information and documents.
    * ACCESSIBLE MENU: As a user, I want to be able to access a navigation menu at any time, so I can easily navigate through the website content.
@@ -29,7 +30,7 @@ This site was created respecting the Five Planes Of Website Design:
  
  ### PRODUCTS
    * PRODUCT LIST: As a user, I want to see a catalog with all the products sorted in categories.
-   * FILTERING: As a user, I want to be able to apply filters and to sort the listed products, so I can easily find the ones I am interested to buy.
+   * SORTING: As a user, I want to be able to sort the listed products, so I can easily find the ones I am interested to buy.
    * AVAILABILITY: As a user, I want to be able to see the stock availability for low stock products.
    * SHOPPING BAG: As a user, I want to be able to add any product to the shopping bag in a selected quantity.
    * ADMIN: As an admin, I want to be able to add, edit or delete any product to the website.
@@ -41,7 +42,7 @@ This site was created respecting the Five Planes Of Website Design:
  ### WISHLIST
    * PRODUCT ADD: As a logged-in user, I want to be able to add/remove any product from the Wishlist.
    * PRODUCT LIST: As a logged-in user, I want to see all the products added to Wishlist.
-   * FILTERING: As a logged-in user, I want to be able to apply filters and to sort the products in the Wishlist.
+   * SORTING: As a logged-in user, I want to be able to sort the products in the Wishlist.
    * ADD TO BAG: As a logged-in user, I want to be able to add products to the shopping bag from the Wishlist page.
 
  ### SHOPPING BAG
