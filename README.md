@@ -164,6 +164,8 @@ All the colours were selected with the eyedropper plugin from the website cover,
 
 ## Marketing
 * The marketing strategy includes a Facebook business page that is intended to create a good image of the shop by posting news and promotions available. By highly promoting the products and always adding new content, the page will increase its popularity and attract more and more customers to buy from the online store.
+<img width="1308" alt="Screenshot 2023-05-30 at 07 44 38" src="https://github.com/funkybeppe/sip-society/assets/105980082/b9f8bf50-6a99-4eaf-a52d-d831fadaeb4a">
+<img width="1236" alt="Screenshot 2023-05-30 at 07 45 01" src="https://github.com/funkybeppe/sip-society/assets/105980082/14602f2e-929c-41f3-a31e-73336e5671db">
 
 ## Agile Methodology
 This project was developed using the Agile methodology.
