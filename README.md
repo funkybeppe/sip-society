@@ -283,25 +283,25 @@ The project design has been adapted to all types of devices using Bootstrap pred
 
 ## Tools Used
 
-[GitHub](https://github.com/) - used for hosting the source code of the program
-[Visual Studio](https://code.visualstudio.com/) - for writing and testing the code
-[Heroku](https://heroku.com/) - used for deploying the project
-[Balsamiq](https://balsamiq.com/) - for creating the wireframes
-[DrawSQL](https://drawsql.app/) - used for creating the Database relational schema
-[Favicon.io](https://favicon.io/) - used for generating the website favicon
-[Image Resizer](https://imageresizer.com/) - for compressing the images
-[Font Awesome](https://fontawesome.com/) - for creating atractive UX with icons
-[Bootstrap4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - for adding predifined styled elements and creating responsiveness
-[Google Fonts](https://fonts.google.com/) - for typography
-[JsHint](https://jshint.com/) - used for validating the javascript code
-[pycodestyle](https://pypi.org/project/pycodestyle/) - used for validating the python code
-[HTML - W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - used for validating the HTML
-[CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri)- used for validating the CSS
-[Chrome Dev tools](https://developer.chrome.com/docs/devtools/) - for debugging the project
-[AWS](https://aws.amazon.com/) - for storing media and static data
-[Stripe](https://stripe.com/gb) - for payments
-[ElephantSql](https://www.elephantsql.com/) - for hosting the PostgresSql database migrated from Heroku LightHouse - for testing performance
-Gmail - for sending emails using the SMTP server
+* [GitHub](https://github.com/) - used for hosting the source code of the program
+* [Visual Studio](https://code.visualstudio.com/) - for writing and testing the code
+* [Heroku](https://heroku.com/) - used for deploying the project
+* [Balsamiq](https://balsamiq.com/) - for creating the wireframes
+* [DrawSQL](https://drawsql.app/) - used for creating the Database relational schema
+* [Favicon.io](https://favicon.io/) - used for generating the website favicon
+* [Image Resizer](https://imageresizer.com/) - for compressing the images
+* [Font Awesome](https://fontawesome.com/) - for creating atractive UX with icons
+* [Bootstrap4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - for adding predifined styled elements and creating responsiveness
+* [Google Fonts](https://fonts.google.com/) - for typography
+* [JsHint](https://jshint.com/) - used for validating the javascript code
+* [pycodestyle](https://pypi.org/project/pycodestyle/) - used for validating the python code
+* [HTML - W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - used for validating the HTML
+* [CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri)- used for validating the CSS
+* [Chrome Dev tools](https://developer.chrome.com/docs/devtools/) - for debugging the project
+* [AWS](https://aws.amazon.com/) - for storing media and static data
+* [Stripe](https://stripe.com/gb) - for payments
+* [ElephantSql](https://www.elephantsql.com/) - for hosting the PostgresSql database migrated from Heroku LightHouse - for testing performance
+* Gmail - for sending emails using the SMTP server
 
 ### Python packages
 * django
