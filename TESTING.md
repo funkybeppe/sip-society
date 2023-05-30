@@ -517,23 +517,26 @@ The website was tested on different browser for assuring the features work accor
 #### HTML
 The html code of the website was validated using W3 Markup Validator.
 At the time of deployment the validation have the following outcome:
+  * <img width="552" alt="Screenshot 2023-05-30 at 07 56 56" src="https://github.com/funkybeppe/sip-society/assets/105980082/effe34c4-1500-41b3-830e-08a5ad6d947d">
 
 #### CSS
 The CSS code was validated using W3 Jigsaw Validator
 At the time of deployment the validation for base.css has the following outcome:
+  * <img width="656" alt="Screenshot 2023-05-30 at 07 58 45" src="https://github.com/funkybeppe/sip-society/assets/105980082/252fbb58-0e52-441d-af60-f883714c89de">
 
 #### JAVASCRIPT
 The Javascript code was validated using using JsHint
-
+  * <img width="343" alt="Screenshot 2023-05-30 at 08 07 05" src="https://github.com/funkybeppe/sip-society/assets/105980082/f8f394b6-0119-432f-b1e6-c98b3ca35ed6">
+  * <img width="374" alt="Screenshot 2023-05-30 at 08 09 07" src="https://github.com/funkybeppe/sip-society/assets/105980082/30a781a8-db9f-4701-864a-cf89baab9d13">
 #### PYTHON
 The python code was tested using pycodestyle online validator.
 At the time of deployment the python code validation has the following outcome:
-
-### Accessibility
-The accessibility of the website was tested with Wave
-
+  
 ### Performance
 The performance of the website was tested with Google Lighthouse
+  * <img width="743" alt="Screenshot 2023-05-30 at 08 16 11" src="https://github.com/funkybeppe/sip-society/assets/105980082/6c8feaa7-fe48-4f52-86a9-ca0723c4f89b">
+  * <img width="730" alt="Screenshot 2023-05-30 at 08 14 06" src="https://github.com/funkybeppe/sip-society/assets/105980082/bf00835e-9101-48a9-8b32-07aa718b4591">
+  * <img width="781" alt="Screenshot 2023-05-30 at 08 15 37" src="https://github.com/funkybeppe/sip-society/assets/105980082/194dade6-5a52-4e36-a1c6-ccd46a5a8fa0">
 
 ### Bugs
 Form reloads page
