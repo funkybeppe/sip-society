@@ -119,7 +119,7 @@ The structure of the website is divided into multiple pages and the content is d
 ### Skeleton 
 
 #### Wireframes
-The wireframes for mobile and desktop were created with Balsamiq tool.
+The wireframes for mobile and desktop were created with [Balsamiq](https://balsamiq.com/) tool.
 <img width="554" alt="Screenshot 2023-05-29 at 20 16 24" src="https://github.com/funkybeppe/sip-society/assets/105980082/aedd1728-d609-4868-857b-203a4603a5af">
 <img width="550" alt="Screenshot 2023-05-29 at 20 16 33" src="https://github.com/funkybeppe/sip-society/assets/105980082/1aa62a95-9a6c-462c-8ff6-3542e1818071">
 <img width="547" alt="Screenshot 2023-05-29 at 20 16 47" src="https://github.com/funkybeppe/sip-society/assets/105980082/7492b625-611d-4425-a2f5-cbe13aae2032">
@@ -283,24 +283,24 @@ The project design has been adapted to all types of devices using Bootstrap pred
 
 ## Tools Used
 
-GitHub - used for hosting the source code of the program
-Visual Studio - for writing and testing the code
-Heroku - used for deploying the project
-Balsamiq - for creating the wireframes
-LucidChart - used for creating the Database relational schema
-Favicon.io - used for generating the website favicon
-TinyPNG - for compressing the images
-Font Awesome - for creating atractive UX with icons
-Bootstrap4 - for adding predifined styled elements and creating responsiveness
-Google Fonts - for typography
-JsHint - used for validating the javascript code
-pycodestyle - used for validating the python code
-HTML - W3C HTML Validator - used for validating the HTML
-CSS - Jigsaw CSS Validator - used for validating the CSS
-Chrome Del Tools - for debugging the project
-W.A.V.E. - for testing accessibility
-AWS - for storing media and static data
-ElephantSql - for hosting the PostgresSql database migrated from Heroku LightHouse - for testing performance
+[GitHub](https://github.com/) - used for hosting the source code of the program
+[Visual Studio](https://code.visualstudio.com/) - for writing and testing the code
+[Heroku](https://heroku.com/) - used for deploying the project
+[Balsamiq](https://balsamiq.com/) - for creating the wireframes
+[DrawSQL](https://drawsql.app/) - used for creating the Database relational schema
+[Favicon.io](https://favicon.io/) - used for generating the website favicon
+[Image Resizer](https://imageresizer.com/) - for compressing the images
+[Font Awesome](https://fontawesome.com/) - for creating atractive UX with icons
+[Bootstrap4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - for adding predifined styled elements and creating responsiveness
+[Google Fonts](https://fonts.google.com/) - for typography
+[JsHint](https://jshint.com/) - used for validating the javascript code
+[pycodestyle](https://pypi.org/project/pycodestyle/) - used for validating the python code
+[HTML - W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options) - used for validating the HTML
+[CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri)- used for validating the CSS
+[Chrome Dev tools](https://developer.chrome.com/docs/devtools/) - for debugging the project
+[AWS](https://aws.amazon.com/) - for storing media and static data
+[Stripe](https://stripe.com/gb) - for payments
+[ElephantSql](https://www.elephantsql.com/) - for hosting the PostgresSql database migrated from Heroku LightHouse - for testing performance
 Gmail - for sending emails using the SMTP server
 
 ### Python packages
@@ -346,13 +346,13 @@ In the terminal enter the command  pip3 freeze > requirements.txt, and a file wi
 ### Fork the repository
 For creating a copy of the repository on your account and change it without affecting the original project, useFork directly from GitHub:
 
-* On My Repository Page, press Fork in the top right of the page
+* On [My Repository Page](https://github.com/funkybeppe/sip-society/), press Fork in the top right of the page
 * A forked version of my project will appear in your repository
 
 ### Clone the repository
-For creating a clone of the repository on your local machine, useClone:
+For creating a clone of the repository on your local machine, use Clone:
 
-* On My Repository Page, click the Code green button, right above the code window
+* On [My Repository Page](https://github.com/funkybeppe/sip-society/), click the Code green button, right above the code window
 * Chose from HTTPS, SSH and GitClub CLI format and copy (preferably HTTPS)
 * In your IDE open Git Bash
 * Enter the command git clone followed by the copied URL
@@ -363,12 +363,13 @@ For creating a clone of the repository on your local machine, useClone:
 * The content of the website is fictive.
 
 ### Media
-* All products images used on the site were taken from Google
+* All products images used on the site were taken from [Google](https://www.google.com/)
 
 ### Code 
-* Templates were taken and adapted from Code Institute project Boutique Ado
-* The Review code was taken and adapted from Stackoverflow
-* The loading spinner was taken and adapted from Code Institute project Boutique Ado
+* Templates were taken and adapted from [Code Institute](https://learn.codeinstitute.net/) project Boutique Ado
+* The Review code was taken and adapted from [Stackoverflow](https://stackoverflow.com/)
+* The loading spinner was taken and adapted from [Code Institute](https://learn.codeinstitute.net/) project Boutique Ado
+* The email subscription form was taken and adapted from [Mailchimp](https://mailchimp.com/)
 
 ## Acknowledgements
 Code Institute for all the material and support offered
