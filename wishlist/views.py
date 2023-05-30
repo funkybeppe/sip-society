@@ -65,7 +65,8 @@ class WishList(LoginRequiredMixin, ListView):
             if 'q' in request.GET:
                 query = request.GET['q']
                 if not query:
-                    messages.error(request, "You didn't enter any search criteria!")
+                    messages.error(
+                        request, "You didn't enter any search criteria!")
                     return redirect(reverse('products'))
 
                 queries = Q(name__icontains=query) | Q(region__icontains=query) | \
